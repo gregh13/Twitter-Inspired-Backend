@@ -1,0 +1,575 @@
+[33mcommit 76df65a257044eb339191a1ad14a09a218bc4de5[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Gregory Herringer <greg.herringer@gmail.com>
+Date:   Fri Mar 1 11:38:57 2024 -0800
+
+    fixes issue with follower list not being updated in the followerUser endpoint
+
+[33mcommit f5cb4c48585b81c2c2815539fad9d2f9a0fd2631[m
+Author: James Pharis <jamesmpharis@gmail.com>
+Date:   Fri Mar 1 14:34:20 2024 -0500
+
+    Validate & Hashtag Endpoints working correctly.
+
+[33mcommit 93f8964e11dad8adf0b3ca63d9ead3979de07a13[m
+Author: J-Eichhorn <joshuaeichhorn@ymail.com>
+Date:   Fri Mar 1 12:15:47 2024 -0500
+
+    working on post follow endpoint
+
+[33mcommit 17258aa2a45b4d25ddd638210bca81b2a19e986a[m
+Author: Gregory Herringer <greg.herringer@gmail.com>
+Date:   Fri Mar 1 09:03:16 2024 -0800
+
+    fixes issue in processTweetMentions method by updating tweet mentionList instead of user mentionList
+
+[33mcommit eee35915fa3e9203a1895acc8a15273d61c4332f[m
+Author: Gregory Herringer <greg.herringer@gmail.com>
+Date:   Fri Mar 1 08:23:16 2024 -0800
+
+    adds logic in getContext method to filter out deleted replies and ensure transitivity in the before/after reply chains
+
+[33mcommit 0413e5b6bfbcf1f859bb4efadb088f4a35edf59b[m
+Author: J-Eichhorn <joshuaeichhorn@ymail.com>
+Date:   Fri Mar 1 01:29:33 2024 -0500
+
+    created final get endpoints for user and user post endpoint
+
+[33mcommit 802ee2227d690b1f71f81e04083f1e38d3bd5209[m
+Author: Gregory Herringer <greg.herringer@gmail.com>
+Date:   Thu Feb 29 17:43:10 2024 -0800
+
+    fixes issue with likeTweet method not allowing other users to like tweets (credential matching issue)
+
+[33mcommit 4f95af6e61ff87a6ce99368b87d8204f3cba0e52[m
+Author: Gregory Herringer <greg.herringer@gmail.com>
+Date:   Thu Feb 29 17:38:50 2024 -0800
+
+    fixes issue with getMentionList not being updated properly
+
+[33mcommit fcce9e753842d689b7b4e455f1c13df7bf74b7f9[m
+Author: Gregory Herringer <greg.herringer@gmail.com>
+Date:   Thu Feb 29 15:30:20 2024 -0800
+
+    fixes issue in getContext that was altering a tweets replyList when it shouldn't
+
+[33mcommit 98b912b85df90bd175b76fcd46bd655afa227155[m
+Author: Gregory Herringer <greg.herringer@gmail.com>
+Date:   Thu Feb 29 15:20:48 2024 -0800
+
+    fixes issue with duplicate list references causing errors in writing to DB
+
+[33mcommit 988b3709095fc13e57b6d21eee8642d662d239e2[m
+Author: Gregory Herringer <greg.herringer@gmail.com>
+Date:   Thu Feb 29 14:52:30 2024 -0800
+
+    adds logic to likeTweet method to protect against a user liking a tweet more than once
+
+[33mcommit cac926dd51eb5d40db4ced7972e5a8f050a6952c[m
+Author: Gregory Herringer <greg.herringer@gmail.com>
+Date:   Thu Feb 29 14:49:35 2024 -0800
+
+    adds exception handling for bad requests with credentials
+
+[33mcommit 37d613ec589396d0a18b95555ab5bf6c2f3413f9[m
+Author: Gregory Herringer <greg.herringer@gmail.com>
+Date:   Thu Feb 29 13:36:08 2024 -0800
+
+    updates request body type in controller, service, and service impl to align with incoming request type (CredentialsDto instead of TweetRequestDto)
+
+[33mcommit 6f0f4d088ad4b2aa78c31e60b5ec71b3fd92aef0[m
+Author: J-Eichhorn <joshuaeichhorn@ymail.com>
+Date:   Thu Feb 29 15:37:54 2024 -0500
+
+    adds three more end points in the user controller and serviceImpl classes
+
+[33mcommit 313fdd848c3f5b87b7290d6bfb2316342e10259e[m
+Author: James Pharis <jamesmpharis@gmail.com>
+Date:   Thu Feb 29 15:04:14 2024 -0500
+
+    Updated logic on ValidateServiceImpl.
+
+[33mcommit 1f47f17aa1cd378c125380c678ded400ae6b6332[m
+Author: Gregory Herringer <greg.herringer@gmail.com>
+Date:   Thu Feb 29 11:42:58 2024 -0800
+
+    fixes issue where tweet tag list and user mention list aren't initialized
+
+[33mcommit 26fdae667a29ebb895fbd99dc3a802fedece9a0b[m
+Merge: 0dedf4d 3203a18
+Author: Gregory Herringer <greg.herringer@gmail.com>
+Date:   Thu Feb 29 11:11:10 2024 -0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 0dedf4d9b446d95d503ead5b96b0ffef94fe564a[m
+Author: Gregory Herringer <greg.herringer@gmail.com>
+Date:   Thu Feb 29 11:10:48 2024 -0800
+
+    fixes issue with controller not able to get path variable parameter
+
+[33mcommit 3203a1875bed5791bb0735fb0fe0ecfbe8df6a2a[m
+Author: J-Eichhorn <joshuaeichhorn@ymail.com>
+Date:   Thu Feb 29 14:04:02 2024 -0500
+
+    adds 3 get endpoints for the user controller
+
+[33mcommit ae1fd825b0aed5d28f0f06aa1ea51ec105577356[m
+Merge: b7dacce 2c53c13
+Author: Gregory Herringer <greg.herringer@gmail.com>
+Date:   Thu Feb 29 10:55:05 2024 -0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit b7dacce62fae23955f421d1788f6ee7d2c1a44f8[m
+Author: Gregory Herringer <greg.herringer@gmail.com>
+Date:   Thu Feb 29 10:52:07 2024 -0800
+
+    fixes method call names to match entity fields and fixes issue with Profile import
+
+[33mcommit 2c53c1306fb11d092782903e035ff7d4169bb2b5[m
+Merge: f91656c f740be0
+Author: J-Eichhorn <joshuaeichhorn@ymail.com>
+Date:   Thu Feb 29 12:28:07 2024 -0500
+
+    fixed userRepository
+
+[33mcommit f91656c7832ccb1ff20da92fb72009f240d081b4[m
+Author: J-Eichhorn <joshuaeichhorn@ymail.com>
+Date:   Thu Feb 29 12:24:37 2024 -0500
+
+    fixed userRepository
+
+[33mcommit f740be0299bd49547bf4ec24f5771a41d3b0cab3[m
+Author: James Pharis <jamesmpharis@gmail.com>
+Date:   Thu Feb 29 12:24:36 2024 -0500
+
+    Changes to derived methods in Hashtag & User Repositories. Changes to methods in Hashtag & Validate ServiceImpl.
+
+[33mcommit 432836f4f29bf22cbfff5dc970cedbdb3d43913a[m
+Author: Gregory Herringer <greg.herringer@gmail.com>
+Date:   Thu Feb 29 08:46:46 2024 -0800
+
+    fixes userRepository derived query using the User Credentials Username
+
+[33mcommit 897e5b9d266219b8e79107b36d0dc7a210c4d7bc[m
+Author: Gregory Herringer <greg.herringer@gmail.com>
+Date:   Thu Feb 29 08:40:43 2024 -0800
+
+    adds setting to make JPA actually create the tables in PostgreSQL
+
+[33mcommit aae877f16c9485d14e9539acd1730c9b14eb605d[m
+Author: Gregory Herringer <greg.herringer@gmail.com>
+Date:   Thu Feb 29 07:54:10 2024 -0800
+
+    updates processTweetMentions method logic to include inactive (deleted) users in content mention parsing (since deleted users can reactivate their account)
+
+[33mcommit bdb6209625a475f9223895c1610906651994928d[m
+Author: Gregory Herringer <greg.herringer@gmail.com>
+Date:   Thu Feb 29 07:48:46 2024 -0800
+
+    updates methods to comment out service logic that manually updated the "mappedBy" fields since it's not necessary
+
+[33mcommit 442c7f779f24b9ecc8da93857948e36019c592fc[m
+Author: Gregory Herringer <greg.herringer@gmail.com>
+Date:   Wed Feb 28 22:31:17 2024 -0800
+
+    implements processTweetContent method
+
+[33mcommit c1cbb4815155292c2433bfcbcee1eef6655616e9[m
+Author: Gregory Herringer <greg.herringer@gmail.com>
+Date:   Wed Feb 28 22:27:10 2024 -0800
+
+    implements processTweetMentions method which parses mentions and reads/writes/updates the appropriate users and tweet in DB
+
+[33mcommit ca9464f0c0fa4f9a600a85e4b465631ed36ed079[m
+Author: Gregory Herringer <greg.herringer@gmail.com>
+Date:   Wed Feb 28 22:18:02 2024 -0800
+
+    implements processTweetHashtags method which parses hashtags and reads/writes/updates the hashtags and tweet in DB
+
+[33mcommit 46e108405b4bc2d70006a6a9ad4ed642a0852236[m
+Author: Gregory Herringer <greg.herringer@gmail.com>
+Date:   Wed Feb 28 21:53:47 2024 -0800
+
+    implements regex pattern fields and regex extractor method for hashtags and mentions
+
+[33mcommit d0accd1f1320ab2c680f3dfd366395bfc3725e1c[m
+Author: Gregory Herringer <greg.herringer@gmail.com>
+Date:   Wed Feb 28 21:28:07 2024 -0800
+
+    implements getUserByCredentials helper method
+
+[33mcommit 7db01e8853bcd349e3c3b52d6e1cf3579ac96f78[m
+Author: James Pharis <jamesmpharis@gmail.com>
+Date:   Wed Feb 28 18:29:16 2024 -0500
+
+    Implemented ValidateServiceImpl, added derived method to UserRepository
+
+[33mcommit 12adfb477c96bbbf0facf9136dc66ba217f3c739[m
+Author: James Pharis <jamesmpharis@gmail.com>
+Date:   Wed Feb 28 18:08:36 2024 -0500
+
+    Implemented Endpoints for HashtagServiceImpl. Not too sure if they work though.
+
+[33mcommit 4b68fa020e42bf6ef7b904d80b331221ea29629b[m
+Author: Gregory Herringer <greg.herringer@gmail.com>
+Date:   Tue Feb 27 22:47:08 2024 -0800
+
+    implements getContext method
+
+[33mcommit 5a0b1d363b13b546461ac7991b14f26289458907[m
+Author: Gregory Herringer <greg.herringer@gmail.com>
+Date:   Tue Feb 27 21:57:45 2024 -0800
+
+    adds @AllArgsConstructor to ContextDto
+
+[33mcommit 235591cb20c88c9879727c4136c4120916beeff1[m
+Author: Gregory Herringer <greg.herringer@gmail.com>
+Date:   Tue Feb 27 21:53:16 2024 -0800
+
+    implements getMentions method
+
+[33mcommit 99d5c0894eb4366e21be672a39e7c5af263a9db7[m
+Author: Gregory Herringer <greg.herringer@gmail.com>
+Date:   Tue Feb 27 21:46:27 2024 -0800
+
+    implements getReposts method
+
+[33mcommit bc80e7066b053b922f5fb712c7424d9c9fe74273[m
+Author: Gregory Herringer <greg.herringer@gmail.com>
+Date:   Tue Feb 27 21:40:42 2024 -0800
+
+    implements getReplies method
+
+[33mcommit a2a271fe3f7eede80b2ad9d4b9a605db8ee23cde[m
+Author: Gregory Herringer <greg.herringer@gmail.com>
+Date:   Tue Feb 27 20:05:23 2024 -0800
+
+    updates validateTweet helper function to include tweetId as argument for improved exception method
+
+[33mcommit 659f6635560f205249f5d9a78b1df305bdbbef4e[m
+Author: Gregory Herringer <greg.herringer@gmail.com>
+Date:   Tue Feb 27 20:01:05 2024 -0800
+
+    implements getAllLikes method
+
+[33mcommit cace35989325a6ed074feccd2aea3b086a5efd9b[m
+Author: Gregory Herringer <greg.herringer@gmail.com>
+Date:   Tue Feb 27 19:27:02 2024 -0800
+
+    implements getAllTags method
+
+[33mcommit 785c11a088dd572d62a46b9e4631cdf4188a5228[m
+Author: Gregory Herringer <greg.herringer@gmail.com>
+Date:   Tue Feb 27 19:21:40 2024 -0800
+
+    implements repostTweet
+
+[33mcommit 8d85335bd95b442d6787e067d2d692d007335a7c[m
+Author: Gregory Herringer <greg.herringer@gmail.com>
+Date:   Tue Feb 27 19:12:17 2024 -0800
+
+    implements replyTweet
+
+[33mcommit 0a7b5add39b81ae170edec8151916dac3af8694b[m
+Author: Gregory Herringer <greg.herringer@gmail.com>
+Date:   Tue Feb 27 18:47:02 2024 -0800
+
+    implements likeTweet method and adds userRepository as private field
+
+[33mcommit 9e55c4c51ed91a91122febc40e77717e947eb125[m
+Author: Gregory Herringer <greg.herringer@gmail.com>
+Date:   Tue Feb 27 18:35:55 2024 -0800
+
+    adds helper method to validate tweet and user together, refactors deleteTweet to use new method
+
+[33mcommit 1dba994cf1d4b0db6ebb615090cd4ff2471fe9a5[m
+Author: Gregory Herringer <greg.herringer@gmail.com>
+Date:   Tue Feb 27 18:31:49 2024 -0800
+
+    implements deleteTweet method
+
+[33mcommit 84e68ae330d478d62efe7c544063c1fd3b1baaa5[m
+Author: Gregory Herringer <greg.herringer@gmail.com>
+Date:   Tue Feb 27 17:52:02 2024 -0800
+
+    implements getOneTweet method
+
+[33mcommit aacffbb261142d1f438d2a22af563b51823e8967[m
+Author: Gregory Herringer <greg.herringer@gmail.com>
+Date:   Tue Feb 27 17:46:19 2024 -0800
+
+    implements createTweet logic (helper methods still need to be implemented)
+
+[33mcommit 7ca1231c80d822e0a95e458d686c01e48c2c46c0[m
+Author: Gregory Herringer <greg.herringer@gmail.com>
+Date:   Tue Feb 27 17:34:48 2024 -0800
+
+    implements getAllTweets service call
+
+[33mcommit 8bcbc6ada1c49997d77f4542dc0762a786576fcd[m
+Author: Gregory Herringer <greg.herringer@gmail.com>
+Date:   Tue Feb 27 17:33:54 2024 -0800
+
+    adds private fields and helper methods for validation and processing
+
+[33mcommit 28d98ef2a520cd70ff31cb0d153a16be85c2fa96[m
+Author: Gregory Herringer <greg.herringer@gmail.com>
+Date:   Tue Feb 27 17:06:23 2024 -0800
+
+    adds derived queries to filter out deleted items and sort by posted timestamp (descending)
+
+[33mcommit c10e5322ff1ce71b7725cc2f76b3bb18b8a6822a[m
+Author: Gregory Herringer <greg.herringer@gmail.com>
+Date:   Tue Feb 27 16:58:48 2024 -0800
+
+    adds derived queries to filter out deleted items
+
+[33mcommit e26d06c26143138338b8ba5f158ec450405b8c5d[m
+Author: Helena Makendengue <helenamakens1013@gmail.com>
+Date:   Tue Feb 27 17:00:41 2024 -0600
+
+    entity changes
+
+[33mcommit 264a0ae9cfae3d2f44b2e1c3a621ad6252525f75[m
+Author: Helena Makendengue <helenamakens1013@gmail.com>
+Date:   Tue Feb 27 16:37:50 2024 -0600
+
+    repository changes
+
+[33mcommit 605287b65b84d18492e383f3552c9fc99ef09a31[m
+Author: Helena Makendengue <helenamakens1013@gmail.com>
+Date:   Tue Feb 27 16:08:59 2024 -0600
+
+    mapper changes
+
+[33mcommit 2be7161fc6936dbe045a30fed042d78970ffbc08[m
+Author: Helena Makendengue <helenamakens1013@gmail.com>
+Date:   Tue Feb 27 15:59:57 2024 -0600
+
+    dto corrections
+
+[33mcommit 7d82a32dd8c5f78f52e521ec2c1e8913a835d474[m
+Author: James Pharis <jamesmpharis@gmail.com>
+Date:   Tue Feb 27 14:00:33 2024 -0500
+
+    Commented Out most of Seeder to avoid errors for now. Updated tweetList in Hasthtag entity for correct syntax.
+
+[33mcommit 98625b02d317d069bf1196f351ee62e64f2fcb4e[m
+Author: James Pharis <jamesmpharis@gmail.com>
+Date:   Tue Feb 27 12:20:01 2024 -0500
+
+    Added Service & AllArgsConstructor Annotation to HashtagServiceImpl & ValidateServiceImpl.
+
+[33mcommit d6341515694d1bd0b9c462837f5ba180ef7d2a11[m
+Author: James Pharis <jamesmpharis@gmail.com>
+Date:   Tue Feb 27 12:17:21 2024 -0500
+
+    Updated HashtagRepository and Hashtag Entity.
+
+[33mcommit 05a4f93d4fdbeb15c7a9695185821872198fb50d[m
+Author: J-Eichhorn <joshuaeichhorn@ymail.com>
+Date:   Tue Feb 27 11:14:16 2024 -0500
+
+    fixes profile and credentials import issues in mapper and dto classes
+
+[33mcommit b5ed459a52b923d61031bb64694c1e2ae31e3d3a[m
+Author: Gregory Herringer <greg.herringer@gmail.com>
+Date:   Tue Feb 27 07:35:46 2024 -0800
+
+    remove placeholder controller advice file
+
+[33mcommit d3713be40272ff4f0da97ff9c72f4d9647ae8f46[m
+Merge: 5b7fe47 cf49f4d
+Author: Gregory Herringer <greg.herringer@gmail.com>
+Date:   Tue Feb 27 07:33:27 2024 -0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 5b7fe47053d05529293b530f5fd34069b7f7c5ac[m
+Author: Gregory Herringer <greg.herringer@gmail.com>
+Date:   Tue Feb 27 07:33:06 2024 -0800
+
+    implemented context mapper
+
+[33mcommit cf49f4df36c534c559619ea87955ed94b09b96f6[m
+Author: J-Eichhorn <joshuaeichhorn@ymail.com>
+Date:   Tue Feb 27 10:31:19 2024 -0500
+
+    updated user entity, created separate profile and credentials embeddables
+
+[33mcommit b0f1e5ea194f1ac9049dfd1e1843de8b2c03cae5[m
+Author: Gregory Herringer <greg.herringer@gmail.com>
+Date:   Mon Feb 26 23:37:41 2024 -0800
+
+    remove unused todo
+
+[33mcommit c91d6e57ef31a775d5d73d3373d9b8d3310b2cc0[m
+Author: Gregory Herringer <greg.herringer@gmail.com>
+Date:   Mon Feb 26 23:30:51 2024 -0800
+
+    add @Service annotation to fix issue
+
+[33mcommit 8730a85587cb44a597ae641137efe081975fd9f8[m
+Author: Gregory Herringer <greg.herringer@gmail.com>
+Date:   Mon Feb 26 23:20:41 2024 -0800
+
+    update many-to-many relationships to use joinTable and link the two fields through join columns
+
+[33mcommit 857079fbecb749191acfbf037f0546d63b6c6881[m
+Author: Gregory Herringer <greg.herringer@gmail.com>
+Date:   Mon Feb 26 23:17:41 2024 -0800
+
+    implement Tweet Mapper
+
+[33mcommit 45f78cbe14c2665188e4ac86757067af09fcd472[m
+Merge: b6efe95 681fc42
+Author: Gregory Herringer <greg.herringer@gmail.com>
+Date:   Mon Feb 26 23:14:10 2024 -0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit b6efe95896339937f816927dccbbe9e34e811940[m
+Author: Gregory Herringer <greg.herringer@gmail.com>
+Date:   Mon Feb 26 23:09:44 2024 -0800
+
+    fix issues with @joincolumn name and the mappedBy name for one-to-many and many-to-one relationship
+
+[33mcommit 681fc428d2590cd85a70a3fb5defc4702f31e771[m
+Author: J-Eichhorn <joshuaeichhorn@ymail.com>
+Date:   Mon Feb 26 23:40:10 2024 -0500
+
+    created basic userservice and userserviciml plus profile and credentials mapper
+
+[33mcommit 543dce6f2e5f67f922f13a2b0d0a548223f67cb3[m
+Author: Gregory Herringer <greg.herringer@gmail.com>
+Date:   Mon Feb 26 19:14:28 2024 -0800
+
+    updates to controller, mapper, repo, and service layer
+
+[33mcommit 85a17b15e9d44fa2072e6bc4425de5909fc31e88[m
+Merge: ad8aa14 87103c0
+Author: Gregory Herringer <greg.herringer@gmail.com>
+Date:   Mon Feb 26 19:09:30 2024 -0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit ad8aa146e9de6ede05dc5229528b2af817df2e01[m
+Author: Gregory Herringer <greg.herringer@gmail.com>
+Date:   Mon Feb 26 19:06:21 2024 -0800
+
+    Updates to stashed files include controller, repo, mapper, etc.
+
+[33mcommit 87103c0ff61cf2eff0eb47fd78796fd7c73b5210[m
+Author: J-Eichhorn <joshuaeichhorn@ymail.com>
+Date:   Mon Feb 26 21:41:14 2024 -0500
+
+    created userdtos, credentialsdto, profiledto and the user repository
+
+[33mcommit d62055e2ba22aa296049f3a2d20ccba709091b71[m
+Author: James Pharis <jamesmpharis@gmail.com>
+Date:   Mon Feb 26 21:06:30 2024 -0500
+
+    Changes to Hashtag Entity & Hashtag Mapper (not sure if mapper is correct).
+
+[33mcommit a725bded62683a2f08d82536035878ea6f4131c2[m
+Author: J-Eichhorn <joshuaeichhorn@ymail.com>
+Date:   Mon Feb 26 21:01:30 2024 -0500
+
+    created User entity
+
+[33mcommit 3b9f6231cf3e34a1b69bdeb47fcf2e77c28c269b[m
+Author: Gregory Herringer <greg.herringer@gmail.com>
+Date:   Mon Feb 26 17:55:53 2024 -0800
+
+    add annotation to instantiate timestamp
+
+[33mcommit 9ba581f8aadb7eacf16ca27a7738951f3615c974[m
+Author: James Pharis <jamesmpharis@gmail.com>
+Date:   Mon Feb 26 20:27:06 2024 -0500
+
+    Completed Exceptions & added more info about the endpoints, as well as some other changes in Hashtag & Validates classes.
+
+[33mcommit 29ad39a921601faac321601720a71268b866ab30[m
+Author: James Pharis <jamesmpharis@gmail.com>
+Date:   Mon Feb 26 19:03:13 2024 -0500
+
+    Hashtag & Validate completed? Would like for someone to check over my hashtag entity.
+
+[33mcommit f0b2f33e20a457531506d240ee5e0e99a5535c11[m
+Author: Gregory Herringer <greg.herringer@gmail.com>
+Date:   Mon Feb 26 16:01:34 2024 -0800
+
+    removed unused specific tweet request types (replaced with simplified single request/response dto)
+
+[33mcommit f762ce20fa02bbdf4de4d491be224a3e6e4b372f[m
+Author: Gregory Herringer <greg.herringer@gmail.com>
+Date:   Mon Feb 26 16:00:05 2024 -0800
+
+    implement tweet controller and tweet service layer (interface and impl)
+
+[33mcommit f15603d601790443701ab6d15cbfd68c822cf7d7[m
+Author: Gregory Herringer <greg.herringer@gmail.com>
+Date:   Mon Feb 26 15:59:20 2024 -0800
+
+    implement single request/response dto for tweet to simplify process
+
+[33mcommit 33f489af0596e970c95f11ab7004b65b155e7371[m
+Author: Gregory Herringer <greg.herringer@gmail.com>
+Date:   Mon Feb 26 15:50:11 2024 -0800
+
+    implement ContextDto
+
+[33mcommit 93119efd77cc95be1fcd315517b772bdb9580273[m
+Author: Gregory Herringer <greg.herringer@gmail.com>
+Date:   Mon Feb 26 15:17:38 2024 -0800
+
+    implement Tweet request and response dtos for simple, reply, and repost tweets
+
+[33mcommit 16d01901708a327ccef2d262306eb069cd15a16d[m
+Author: Gregory Herringer <greg.herringer@gmail.com>
+Date:   Mon Feb 26 14:20:13 2024 -0800
+
+    implement Tweet entity
+
+[33mcommit bd9934feed88c00c284103a0f9bb1b25dfb153d7[m[33m ([m[1;31morigin/greg-branch[m[33m)[m
+Author: Gregory Herringer <greg.herringer@gmail.com>
+Date:   Mon Feb 26 13:16:13 2024 -0800
+
+    create initial files for Tweets in each package
+
+[33mcommit 9105ccf3fcbacd49739f93550b7c799701d73067[m
+Author: Gregory Herringer <greg.herringer@gmail.com>
+Date:   Mon Feb 26 11:33:04 2024 -0800
+
+    application.properties in repo
+
+[33mcommit 36fd890fcf0040fe3c407ec393c36a4891dc24ee[m
+Author: Gregory Herringer <greg.herringer@gmail.com>
+Date:   Mon Feb 26 11:32:38 2024 -0800
+
+    allow application.properties in repo
+
+[33mcommit 5ed7217cc9ad7ee82f755e65bd7d91e1f344e00f[m
+Author: Gregory Herringer <greg.herringer@gmail.com>
+Date:   Mon Feb 26 10:23:42 2024 -0800
+
+    update gitignore to include application properties
+
+[33mcommit 08d323218fafb5b3f768b07a8f0eaf65c562c9f7[m
+Author: Gregory Herringer <greg.herringer@gmail.com>
+Date:   Mon Feb 26 10:21:24 2024 -0800
+
+    remove application properties from repo
+
+[33mcommit 5dbd29dfd19741bd834b9022a48fbb789ba807c2[m
+Author: Gregory Herringer <greg.herringer@gmail.com>
+Date:   Mon Feb 26 10:04:16 2024 -0800
+
+    initialize SpringBoot project, setup pom.xml/Maven dependencies, configure application properties for team-2 PostgreSQL database
+
+[33mcommit 3792d0a231fafdb8d4e94d1d6971da27a82c2fe9[m
+Author: github-classroom[bot] <66690702+github-classroom[bot]@users.noreply.github.com>
+Date:   Mon Feb 26 03:16:10 2024 +0000
+
+    Initial commit
